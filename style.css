@@ -1,0 +1,388 @@
+/* Reset default browser styles */
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+/* Global styles */
+body {
+	font-family: sans-serif;
+	line-height: 1.5;
+}
+
+header {
+	background-color: #222;
+	color: #fff;
+	padding: 20px;
+}
+
+nav ul {
+	list-style: none;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+nav ul li {
+	margin-right: 20px;
+}
+
+nav ul li a {
+	color: #fff;
+	text-decoration: none;
+	font-weight: bold;
+}
+
+main {
+	padding: 20px;
+}
+
+section {
+	margin-bottom: 40px;
+}
+
+#hero {
+	background-image: url('img/hero.jpg');
+	height: 500px;
+	background-size: cover;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+#hero h1 {
+	font-size: 3rem;
+	margin-bottom: 10px;
+}
+
+#publications {
+	text-align: center;
+}
+
+.gallery {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+	grid-gap: 20px;
+}
+
+.gallery img {
+	max-width: 100%;
+}
+
+footer {
+	background-color: #eee;
+	padding: 20px;
+	text-align: center;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 500px;
+    background-color: #fff;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+    overflow: hidden;
+  }
+  
+  .card img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+  }
+  
+  .card-body {
+    padding: 1.5rem;
+  }
+  
+  .card-title {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+	text-align: left;
+  }
+  
+  .card-text {
+    margin-bottom: 1rem;
+	text-align: left;
+  }
+  
+  .card-link {
+    color: #000;
+    text-decoration: none;
+    font-weight: bold;
+    transition: all 0.2s ease-in-out;
+	text-align: left;
+  }
+  
+  .card-link:hover {
+    color: #666;
+	text-align: left;
+  }
+  .card:hover {
+	/* set the style of the card when it is being hovered */
+	transform: translate(0, -5px);
+	box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  }
+  .card-container {
+	/* set the display style to flex */
+	display: flex;
+	/* align the items (cards) horizontally */
+	align-items: center;
+	/* add some space between the cards */
+	gap: 40px;
+  }  
+
+  h2 {
+	margin-bottom: 20px;
+	text-align: center;
+  }
+
+ /* Flip card container */
+.flip-card {
+	background-color: transparent;
+	perspective: 1000px;
+  }
+  
+  /* Flip card inner container */
+  .flip-card-inner {
+	position: relative;
+	width: 100%;
+	height: 100%;
+	text-align: center;
+	transition: transform 0.6s;
+	transform-style: preserve-3d;
+  }
+  
+  /* Flip card front side styling */
+  .card-image {
+	position: relative;
+	overflow: hidden;
+	height: 0;
+	padding-bottom: 56.25%; /* 16:9 aspect ratio */
+  }
+  
+  .card-image-top {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+  }
+  
+  /* Flip card back side styling */
+  .flip-card-back {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: #f1f1f1;
+	transform: rotateY(180deg);
+	backface-visibility: hidden;
+  }
+  
+  /* Flip card animation */
+  .flip-card:hover .flip-card-inner {
+	transform: rotateY(180deg);
+  }
+
+/* Project card container */
+.project-card {
+	position: relative;
+  }
+  
+  /* Project card front side styling */
+  .card-image {
+	position: relative;
+	overflow: hidden;
+	height: 0;
+	padding-bottom: 75%; /* 4:3 aspect ratio */
+  }
+  
+  .card-image-top {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+  }
+  
+  /* Project card back side styling */
+  .card-overlay {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	display: none;
+	z-index: 9999;
+	background-color: rgba(0, 0, 0, 0.8);
+  }
+  
+  .overlay-content {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100%;
+  }
+  
+  .overlay-image {
+	width: 100%;
+	height: 100%;
+	object-fit: contain;
+  }
+  
+  .overlay-text {
+	color: #fff;
+	text-align: center;
+	padding: 30px;
+	max-width: 800px;
+	margin: 0 auto;
+  }
+  
+  .overlay-title {
+	font-size: 2rem;
+	margin-bottom: 20px;
+  }
+  
+  .overlay-description {
+	font-size: 1.2rem;
+	margin-bottom: 30px;
+  }
+  
+  /* View project and minimize buttons */
+  .view-project-btn {
+	position: absolute;
+	bottom: 10px;
+	right: 10px;
+  }
+  
+  .minimize-project-btn {
+	display: block;
+	margin: 0 auto;
+	margin-top: 30px;
+  }
+  
+  /* Project card animation */
+  .project-card.expanded .card-image {
+	opacity: 0;
+	visibility: hidden;
+  }
+  
+  .project-card.expanded .card-overlay {
+	display: flex;
+  }
+  
+  @media (max-width: 768px) {
+	.overlay-text {
+	  padding: 10px;
+	}
+  
+	.overlay-title {
+	  font-size: 1.5rem;
+	}
+  
+	.overlay-description {
+	  font-size: 1rem;
+	}
+  
+	.minimize-project-btn {
+	  font-size: 0.8rem;
+	}
+  }
+#posters {
+	text-align: center;
+}
+  html {
+  scroll-behavior: smooth;
+}
+.scroll-link {
+  display: inline-block;
+  padding: 10px;
+  transition: background-color 0.3s ease;
+}
+
+.scroll-link:hover {
+  background-color: #f0f0f0;
+}
+
+.logo{
+	position: center;
+}
+
+.logo-card {
+	position: absolute;
+	transform: translateX(-100%);
+	background-color: #eee;
+	border: 2px solid #2a2a2a;
+	padding: 10px;
+	align-items: center;
+	display: none;
+  }
+  
+  .logo:hover + #logo-card {
+	display: block;
+  }
+
+  .hidden{
+	display: none;
+  }
+
+  #education{
+	text-align: center;
+  }
+
+  .logo-container{
+	
+	display: flex;
+	/* align the items (cards) horizontally */
+	justify-content: center;
+	/* add some space between the cards */
+	gap: 40px;
+	
+	
+  }
+
+  .image-container {
+	position: relative;
+	width: 100%;
+	height: auto;
+  }
+  
+  .overlay {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	opacity: 0;
+	transition: .5s ease;
+	background-color: rgba(0,0,0,0.5);
+  }
+  
+  .image-container:hover .overlay {
+	opacity: 1;
+  }
+  
+  .overlay p {
+	color: white;
+	font-size: 20px;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	text-align: center;
+  }
+  
+  .tennessee-image{
+	width: 100%;
+	max-width: 200px;
+	height: auto;
+  }
+
+
